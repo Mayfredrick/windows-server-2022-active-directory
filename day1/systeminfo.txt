@@ -1,0 +1,9 @@
+Computer name :WIN-9I8QPHOF7M6
+
+Windows Server version:10.0.20348 N/A Build 20348
+
+Installed RAM:3,327MB
+
+Processor:2(Intel64 Family 6 Model 142 Stepping 11 GenuineIntel ~1800 Mhz
+
+System type: x64-based PC
