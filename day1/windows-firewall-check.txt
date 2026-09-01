@@ -1,8 +1,0 @@
-#Domain profile Status
--profile status is enabled
-
-#Private profile status
--profile status is enabled
-
-#Public profile status
--profile status is enabled
