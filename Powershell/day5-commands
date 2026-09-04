@@ -1,0 +1,8 @@
+# Commands used
+whomai
+hostname
+systeminfo
+gpupdate /force
+gpresult /r
+Get-ADComputer -Filter *
+Resolve-DNSName PC1-WIN10
