@@ -1,0 +1,8 @@
+## Commands Used
+Get-ADDomain
+hostname
+gpresult /r
+gpudate /force
+Get-GPO -All
+Get-GPInheritance -Target "OU=IT,DC=homelab,DC=local"
+Get-GPOReport -All -ReportType HTML -Path C:\Temp\GPOReport.html
