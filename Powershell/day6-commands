@@ -1,0 +1,50 @@
+##Verifying Active Directory
+Get-ADDomain
+Get-ADForest
+
+## Creating New Users
+New-ADUser
+-Name""
+-GivenName""
+-Surname ""
+-SamAccountName""
+-UserPrincipalName""
+-Path""
+-AccountPassword(ConvertTo-SecureString "" -AsPlainText -Force)
+-Enabled $true
+
+##Creating a Security Group
+New-ADGroup
+-Name "IT_Support"
+-GroupScope Global
+-GroupCategory Security
+-Path "OU=IT,DC=homelab,DC=local"
+
+##Add Users to the group
+Add-ADGroupMember IT_Support -Members ""
+
+##Verify
+Get-ADGroupMember IT_Support
+
+##Reset a Password
+Set-ADAccountPassword ""
+-Reset
+-NewPassword(ConvertTo-SecureString "" -AsPlainText -Force)
+-Set-ADUser "" -ChangePasswordAtLogon $true
+
+##Disable Account
+Disable-ADAccount alice.smith
+Get-ADUser alice.smith -Properties Enabled
+
+## Enable Account
+Enable-ADAccount alice.smith
+
+##Search a Directory
+Get-ADUser -SearchBase "OU=IT,DC=homelab,DC=local" -Filter *
+
+## Export a Report
+Get-ADUser -Filter * |
+Select Name,SamAccountName,Enabled |
+Export-Csv C:\Temp\ADUsers.csv -NoTypeInformation
+
+
